@@ -12,6 +12,7 @@
         <module>invoker-dep</module>
         <module>invoker</module>
         <module>agent</module>
+        <module>example</module>
     </modules>
 
     <dependencyManagement>
@@ -24,6 +25,11 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>invoker-dep</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>invoker</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
