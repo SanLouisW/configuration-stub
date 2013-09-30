@@ -7,13 +7,15 @@ USAGE:
 
 * Place a mock.properties to your classpath:
 
-\\# mock.properties
+```
+# mock.properties
 
-\\# You want to stub these methods of UserService
+# You want to stub these methods of UserService
 com.github.configurationstub.example.UserService.methods=registerUser
-\\# The UserServiceInvoker is custom stub for registerUser
+# The UserServiceInvoker is custom stub for registerUser
 com.github.configurationstub.example.UserService.registerUser.invoker=com.github.configuration.example.UserServiceInvoker
 
+```
 * Write your custom stub class
 
 ```java
