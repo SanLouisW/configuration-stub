@@ -20,7 +20,7 @@ public class ClassGenerator {
     private final static Logger logger = LoggerFactory.getLogger(ClassGenerator.class);
 
     public byte[] generate(ClassMeta classMeta) throws CannotCompileException, NotFoundException {
-        logger.debug("start com.qunar.autotest.mock class for {}", classMeta.getName());
+        logger.debug("start mock class for {}", classMeta.getName());
         ClassPool pool = ClassPool.getDefault();
         CtClass ctClass = getClass(pool, classMeta.getName());
         ctClass.defrost();
