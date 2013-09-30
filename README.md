@@ -5,17 +5,18 @@ A configuration stub for java
 
 USAGE:
 
-Step 1: Place a mock.properties to your classpath:
+* Place a mock.properties to your classpath:
 
-#mock.properties
+\\# mock.properties
 
-#You want to stub these methods of UserService
+\\# You want to stub these methods of UserService
 com.github.configurationstub.example.UserService.methods=registerUser
-#The UserServiceInvoker is custom stub for registerUser
+\\# The UserServiceInvoker is custom stub for registerUser
 com.github.configurationstub.example.UserService.registerUser.invoker=com.github.configuration.example.UserServiceInvoker
 
-Step 2: Write your custom stub class
+* Write your custom stub class
 
+```java
 package com.github.configuration.example;
 
 import com.github.configurationstub.Invoker;
@@ -35,8 +36,11 @@ public class UserServiceInvoker extends Invoker {
     }
 }
 
-Step 3: Start stub
+```
 
+* Start stub
+
+```java
     @Test
     public void create_configuration_stub_for_given_method() {
         UserService service = new UserService();
@@ -47,3 +51,5 @@ Step 3: Start stub
 
         service.registerUser("admin"); //call stub method
     }
+
+```
